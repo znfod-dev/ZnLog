@@ -1,0 +1,6 @@
+framework module ZnLog {
+  umbrella header "ZnLog.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,19 @@
+//
+//  ZnLogSample-prefix.pch
+//  ZnLogSample
+//
+//  Created by 박종현 on 12/08/2019.
+//  Copyright © 2019 Znfod. All rights reserved.
+//
+
+#ifndef ZnLogSample_prefix_pch
+#define ZnLogSample_prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <ZnLog/ZnLog.h>
+
+#define ZnLog( s, ... ) ZnLog( @"%@ : %d, %s\n%@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, __FUNCTION__, [NSString stringWithFormat:(s), ##__VA_ARGS__])
+
+#endif /* ZnLogSample_prefix_pch */
